@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis - PlacePrep</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">
+                <div class="nav-brand-icon">🚀</div>
+                <span class="gradient-text">PlacePrep</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/skillgap.html">Role Based Analyzer</a></li>
+                <li><a href="/interview.html">Interview</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/progress.html">Analysis</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="nav-xp">
+                    <span class="nav-xp-value">0</span> XP
+                </div>
+                <div class="nav-streak">
+                    🔥 <span class="nav-streak-value">0</span>
+                </div>
+                <div class="nav-avatar" title="Logout" onclick="App.logout()">U</div>
+            </div>
+            <button class="mobile-toggle"
+                onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <header class="page-header">
+            <h1>📈 Analysis & Study Planner</h1>
+            <p>Track your learning journey, manage tasks, and level up your skills.</p>
+        </header>
+
+        <div id="progress-stats">
+            <!-- Rendered by JS -->
+            <div class="skeleton" style="height: 120px; width: 100%; margin-bottom: 24px;"></div>
+        </div>
+
+        <div class="content-grid two-col">
+            <div class="main-content">
+                <div class="glass-card animate-in">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3>📝 Study Planner</h3>
+                        <button class="btn btn-sm btn-primary"
+                            onclick="document.getElementById('add-plan-modal').classList.add('active')">+ Add
+                            Task</button>
+                    </div>
+                    <div id="study-plans-list">
+                        <!-- Rendered by JS -->
+                        <div class="skeleton" style="height: 60px; margin-bottom: 10px;"></div>
+                        <div class="skeleton" style="height: 60px; margin-bottom: 10px;"></div>
+                        <div class="skeleton" style="height: 60px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="glass-card animate-in">
+                    <h3 style="margin-bottom: 20px;">📜 Full Activity Timeline</h3>
+                    <div id="activity-timeline">
+                        <!-- Rendered by JS -->
+                        <div class="skeleton" style="height: 60px; margin-bottom: 10px;"></div>
+                        <div class="skeleton" style="height: 60px; margin-bottom: 10px;"></div>
+                        <div class="skeleton" style="height: 60px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Plan Modal -->
+    <div class="modal-overlay" id="add-plan-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>New Study Task</h3>
+                <button class="modal-close"
+                    onclick="this.closest('.modal-overlay').classList.remove('active')">✕</button>
+            </div>
+            <form id="add-plan-form">
+                <div class="form-group">
+                    <label class="form-label">Task Title</label>
+                    <input type="text" class="form-input" id="plan-title" placeholder="e.g. Practice Array questions"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description (Optional)</label>
+                    <textarea class="form-textarea" id="plan-desc" placeholder="Details about this task..."></textarea>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" id="plan-category">
+                            <option value="coding">Coding Practice</option>
+                            <option value="theory">Theory</option>
+                            <option value="interview">Interview Prep</option>
+                            <option value="project">Project Work</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Priority</label>
+                        <select class="form-select" id="plan-priority">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;"
+                    onclick="document.getElementById('add-plan-modal').classList.remove('active')">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container"></div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/progress.js"></script>
+</body>
+
+</html>

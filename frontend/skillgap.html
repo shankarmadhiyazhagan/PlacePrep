@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Based Analyzer - PlacePrep</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">
+                <div class="nav-brand-icon">🚀</div>
+                <span class="gradient-text">PlacePrep</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/skillgap.html">Role Based Analyzer</a></li>
+                <li><a href="/interview.html">Interview</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/progress.html">Analysis</a></li>
+            </ul>
+            <div class="nav-user">
+                <div class="nav-xp">
+                    <span class="nav-xp-value">0</span> XP
+                </div>
+                <div class="nav-streak">
+                    🔥 <span class="nav-streak-value">0</span>
+                </div>
+                <div class="nav-avatar" title="Logout" onclick="App.logout()">U</div>
+            </div>
+            <button class="mobile-toggle"
+                onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-wrapper container">
+        <header class="page-header">
+            <h1>📊 Role Based Analyzer</h1>
+            <p>Identify missing skills for your target role and get a personalized learning roadmap.</p>
+        </header>
+
+        <div class="content-grid sidebar">
+            <div class="main-content">
+                <div class="glass-card animate-in" style="margin-bottom: 24px;">
+                    <h3 style="margin-bottom: 24px;">AI Skill Assessment</h3>
+                    <form id="skillgap-form">
+                        <div class="form-group">
+                            <label class="form-label">Target Role</label>
+                            <select class="form-select" id="sg-role">
+                                <option value="Software Engineer">Software Engineer</option>
+                                <option value="Frontend Developer">Frontend Developer</option>
+                                <option value="Backend Developer">Backend Developer</option>
+                                <option value="Data Scientist">Data Scientist</option>
+                                <option value="Full Stack Developer">Full Stack Developer</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Experience Level</label>
+                            <select class="form-select" id="sg-experience">
+                                <option value="fresher">Fresher / Entry Level</option>
+                                <option value="junior">Junior (1-2 years)</option>
+                                <option value="mid">Mid-Senior (3-5 years)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Your Current Skills</label>
+                            <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+                                <input type="text" class="form-input" id="skill-input"
+                                    placeholder="e.g. Python, SQL, React">
+                                <button type="button" class="btn btn-secondary" id="add-skill-btn">Add</button>
+                            </div>
+                            <div id="skill-tags"
+                                style="display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; padding: 12px; background: var(--bg-glass); border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+                                <!-- Tags go here -->
+                                <span style="color: var(--text-muted); font-size: 0.9rem;">No skills added yet</span>
+                            </div>
+                            <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Suggestions:</span>
+                                <button type="button" class="tag tag-cyan quick-skill"
+                                    style="cursor: pointer; border: none;">Java</button>
+                                <button type="button" class="tag tag-cyan quick-skill"
+                                    style="cursor: pointer; border: none;">Python</button>
+                                <button type="button" class="tag tag-cyan quick-skill"
+                                    style="cursor: pointer; border: none;">JavaScript</button>
+                                <button type="button" class="tag tag-cyan quick-skill"
+                                    style="cursor: pointer; border: none;">C++</button>
+                                <button type="button" class="tag tag-cyan quick-skill"
+                                    style="cursor: pointer; border: none;">SQL</button>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px;">
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">📊 Run
+                                Analysis</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="analysis-section" style="display: none;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <aside class="sidebar-content">
+                <div class="glass-card animate-in">
+                    <h3 style="margin-bottom: 20px;">📜 Past Roadmaps</h3>
+                    <div id="skillgap-history">
+                        <!-- Rendered by JS -->
+                        <div class="skeleton" style="height: 60px; margin-bottom: 10px;"></div>
+                        <div class="skeleton" style="height: 60px;"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="toast-container"></div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/skillgap.js"></script>
+</body>
+
+</html>

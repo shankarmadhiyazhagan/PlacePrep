@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PlacePrep - AI-Powered Placement Preparation Platform. Upload resumes, practice interviews, analyze skill gaps, and track your progress.">
+    <title>PlacePrep - AI-Powered Placement Prep</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">
+                <div class="nav-brand-icon">🚀</div>
+                <span class="gradient-text">PlacePrep</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="/login.html" class="btn btn-outline btn-sm">Login</a></li>
+                <li><a href="/login.html" class="btn btn-primary btn-sm">Get Started</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">⚡ AI-Powered Platform</div>
+                <h1>Ace Your <span class="gradient-text">Placement</span> with AI-Driven Preparation</h1>
+                <p class="hero-subtitle">Upload resumes for ATS analysis, practice mock interviews with AI evaluation, identify skill gaps with personalized roadmaps, and track your journey to your dream job.</p>
+                <div class="hero-actions">
+                    <a href="/login.html" class="btn btn-primary btn-lg">🚀 Start Free</a>
+                    <a href="#features" class="btn btn-secondary btn-lg">Learn More ↓</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">AI</div>
+                        <div class="hero-stat-label">Powered Analysis</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">5+</div>
+                        <div class="hero-stat-label">Core Features</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">XP</div>
+                        <div class="hero-stat-label">Gamified Learning</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">24/7</div>
+                        <div class="hero-stat-label">Always Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to <span class="gradient-text">Get Placed</span></h2>
+                <p>A comprehensive toolkit powered by AI to help you prepare, practice, and succeed in your placement journey.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon cyan">📄</div>
+                    <h3>AI Resume Analyzer</h3>
+                    <p>Upload your resume and get instant ATS compatibility scores, keyword optimization, section-by-section feedback, and actionable improvement suggestions.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">ATS Score</span>
+                        <span class="feature-tag">Keyword Analysis</span>
+                        <span class="feature-tag">Smart Suggestions</span>
+                    </div>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon magenta">🎤</div>
+                    <h3>Mock Interview Practice</h3>
+                    <p>Practice with AI-generated interview questions by role, company, and difficulty. Get detailed evaluation with communication, technical depth, and confidence scores.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">Role-Specific</span>
+                        <span class="feature-tag">Timed Sessions</span>
+                        <span class="feature-tag">AI Evaluation</span>
+                    </div>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon purple">📊</div>
+                    <h3>Role Based Analyzer</h3>
+                    <p>Identify critical skill gaps for your target role with an AI-powered assessment. Get a personalized learning roadmap with curated resources and milestones.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">Gap Detection</span>
+                        <span class="feature-tag">Learning Roadmap</span>
+                        <span class="feature-tag">Resource Curation</span>
+                    </div>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon green">📈</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track every aspect of your preparation with detailed analytics, score trends, activity timelines, and a gamified XP system with levels and streaks.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">XP & Levels</span>
+                        <span class="feature-tag">Streak System</span>
+                        <span class="feature-tag">Score Trends</span>
+                    </div>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon amber">📋</div>
+                    <h3>Study Planner</h3>
+                    <p>Create, manage, and track study plans with priorities and categories. Stay organized with a todo-style planner that awards XP for completed tasks.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">Task Manager</span>
+                        <span class="feature-tag">Priorities</span>
+                        <span class="feature-tag">XP Rewards</span>
+                    </div>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon cyan">🏆</div>
+                    <h3>Gamified Experience</h3>
+                    <p>Earn XP for every activity, level up your profile, maintain daily streaks, and see your placement readiness score grow as you prepare consistently.</p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">XP System</span>
+                        <span class="feature-tag">Daily Streaks</span>
+                        <span class="feature-tag">Achievements</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How <span class="gradient-text-secondary">PlacePrep</span> Works</h2>
+                <p>Get placement-ready in four simple steps</p>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;max-width:1000px;margin:0 auto">
+                <div style="text-align:center">
+                    <div style="width:64px;height:64px;border-radius:50%;background:rgba(0,212,255,0.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;border:2px solid rgba(0,212,255,0.3)">1</div>
+                    <h4>Create Account</h4>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px">Sign up in seconds and set your target role. Earn your first 50 XP!</p>
+                </div>
+                <div style="text-align:center">
+                    <div style="width:64px;height:64px;border-radius:50%;background:rgba(139,92,246,0.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;border:2px solid rgba(139,92,246,0.3)">2</div>
+                    <h4>Upload Resume</h4>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px">Get AI-powered analysis with ATS scores, keyword insights, and improvement tips.</p>
+                </div>
+                <div style="text-align:center">
+                    <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,0,110,0.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;border:2px solid rgba(255,0,110,0.3)">3</div>
+                    <h4>Practice & Analyze</h4>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px">Take mock interviews, analyze skill gaps, and follow personalized roadmaps.</p>
+                </div>
+                <div style="text-align:center">
+                    <div style="width:64px;height:64px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;border:2px solid rgba(16,185,129,0.3)">4</div>
+                    <h4>Get Placed!</h4>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:8px">Track your growth, maintain streaks, and walk into interviews with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="padding-bottom:60px">
+        <div class="container" style="text-align:center">
+            <div class="glass-card" style="max-width:700px;margin:0 auto;padding:48px;background:linear-gradient(135deg,rgba(0,212,255,0.05),rgba(139,92,246,0.05))">
+                <h2 style="margin-bottom:16px">Ready to <span class="gradient-text">Ace Your Placements?</span></h2>
+                <p style="color:var(--text-secondary);margin-bottom:28px">Join PlacePrep and start your AI-powered preparation journey today.</p>
+                <a href="/login.html" class="btn btn-primary btn-lg">🚀 Get Started — It's Free</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 PlacePrep • AI-Powered Placement Preparation Platform</p>
+        </div>
+    </footer>
+
+    <script>
+        // Particle animation
+        const container = document.getElementById('particles');
+        if (container) {
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (6 + Math.random() * 6) + 's';
+                const colors = ['var(--accent-cyan)', 'var(--accent-purple)', 'var(--accent-magenta)'];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                container.appendChild(particle);
+            }
+        }
+
+        // Scroll navbar
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar')?.classList.toggle('scrolled', window.scrollY > 20);
+        });
+    </script>
+</body>
+</html>
